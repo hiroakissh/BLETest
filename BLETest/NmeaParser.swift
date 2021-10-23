@@ -16,6 +16,6 @@ protocol NmeaSentence {
     
     func type() -> String
     
-    func parse() -> CLLocation?
+    func parse() -> (CLLocation?,String)
     
 }
