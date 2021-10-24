@@ -26,8 +26,7 @@ class GpggaSentence: NmeaSentence{
         case GEOIDHEGHT = 11
         case GEOIDHEGHTUNIT = 12
         case EFFECTIVETIME = 13
-        case BASEID = 14
-        case CHECKSUM = 15
+        case BASEID_CHECKSUM = 14
     }
     
     required init(rawSentence: [String]) {
