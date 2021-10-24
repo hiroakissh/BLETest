@@ -29,6 +29,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let sampledata = "$GPGGA,085120.307,3541.1493,N,13945.3994,E,1,08,1.0,6.9,M,35.9,M,,0000*5E"
+
+        let location = nmeaParse.parsesentence(data: sampledata)
+        print(location! as CLLocation)
         setup()
     }
 
@@ -180,6 +185,7 @@ extension ViewController: CBPeripheralDelegate {
     private func updateWithData(data : Data) {
         if let data = String(data: data, encoding: String.Encoding.utf8) {
             print(data)
+
 
             
             let location = nmeaParse.parsesentence(data: data)
