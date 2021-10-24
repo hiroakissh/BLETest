@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-public class GpggaSentence: NmeaSentence{
+class GpggaSentence: NmeaSentence{
     var rawSentence: [String]
     
     enum GpggaParam: Int {
@@ -39,12 +39,12 @@ public class GpggaSentence: NmeaSentence{
         return "$GPGGA"
     }
     
-    func parse() -> (CLLocation?,String) {
+    func parse() -> CLLocation? {
         let splittedString = self.rawSentence
         
         if splittedString.count < 17 {
             print("Invalid GPGGA")
-            return (nil,"")
+            return nil
         }
         
         let rawTime = splittedString[GpggaSentence.GpggaParam.TIME.rawValue]
@@ -75,7 +75,8 @@ public class GpggaSentence: NmeaSentence{
         let horizontalAccuracy = CLLocationAccuracy(0)
         let verticalAccuracy = CLLocationAccuracy(0)
         
-        return (CLLocation(coordinate: coordinate,altitude: altitude, horizontalAccuracy: horizontalAccuracy,verticalAccuracy: verticalAccuracy, course: course,speed: speed,timestamp: timestamp!),rawAccuracy)
+//        return (CLLocation(coordinate: coordinate,altitude: altitude, horizontalAccuracy: horizontalAccuracy,verticalAccuracy: verticalAccuracy, course: course,speed: speed,timestamp: timestamp!),rawAccuracy)
+        return CLLocation(coordinate: coordinate,altitude: altitude, horizontalAccuracy: horizontalAccuracy,verticalAccuracy: verticalAccuracy, course: course,speed: speed,timestamp: timestamp!)
     }
     
     //緯度の形式変換

@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		537E8CC8272509B000DFA80B /* NmeaParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E8CC7272509B000DFA80B /* NmeaParse.swift */; };
 		539597162711AC2C00878464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539597152711AC2C00878464 /* AppDelegate.swift */; };
 		539597182711AC2C00878464 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539597172711AC2C00878464 /* SceneDelegate.swift */; };
 		5395971A2711AC2C00878464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539597192711AC2C00878464 /* ViewController.swift */; };
 		5395971D2711AC2C00878464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5395971B2711AC2C00878464 /* Main.storyboard */; };
 		5395971F2711AC2F00878464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5395971E2711AC2F00878464 /* Assets.xcassets */; };
 		539597222711AC2F00878464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539597202711AC2F00878464 /* LaunchScreen.storyboard */; };
-		53F93C142723FD0200A3720C /* NmeaParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F93C132723FD0200A3720C /* NmeaParser.swift */; };
+		53F93C142723FD0200A3720C /* NmeaSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F93C132723FD0200A3720C /* NmeaSentence.swift */; };
 		53F93C162723FDF400A3720C /* GpggaSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F93C152723FDF400A3720C /* GpggaSentence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		537E8CC7272509B000DFA80B /* NmeaParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NmeaParse.swift; sourceTree = "<group>"; };
 		539597122711AC2C00878464 /* BLETest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLETest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539597152711AC2C00878464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539597172711AC2C00878464 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +28,7 @@
 		5395971E2711AC2F00878464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		539597212711AC2F00878464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539597232711AC2F00878464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53F93C132723FD0200A3720C /* NmeaParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NmeaParser.swift; sourceTree = "<group>"; };
+		53F93C132723FD0200A3720C /* NmeaSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NmeaSentence.swift; sourceTree = "<group>"; };
 		53F93C152723FDF400A3720C /* GpggaSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpggaSentence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,8 +69,9 @@
 				5395971E2711AC2F00878464 /* Assets.xcassets */,
 				539597202711AC2F00878464 /* LaunchScreen.storyboard */,
 				539597232711AC2F00878464 /* Info.plist */,
-				53F93C132723FD0200A3720C /* NmeaParser.swift */,
+				53F93C132723FD0200A3720C /* NmeaSentence.swift */,
 				53F93C152723FDF400A3720C /* GpggaSentence.swift */,
+				537E8CC7272509B000DFA80B /* NmeaParse.swift */,
 			);
 			path = BLETest;
 			sourceTree = "<group>";
@@ -145,7 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5395971A2711AC2C00878464 /* ViewController.swift in Sources */,
-				53F93C142723FD0200A3720C /* NmeaParser.swift in Sources */,
+				53F93C142723FD0200A3720C /* NmeaSentence.swift in Sources */,
+				537E8CC8272509B000DFA80B /* NmeaParse.swift in Sources */,
 				53F93C162723FDF400A3720C /* GpggaSentence.swift in Sources */,
 				539597162711AC2C00878464 /* AppDelegate.swift in Sources */,
 				539597182711AC2C00878464 /* SceneDelegate.swift in Sources */,
