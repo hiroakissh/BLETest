@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreBluetooth
+import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -21,6 +22,9 @@ class ViewController: UIViewController {
     var serviceUUID : CBUUID!
     var kRXCBCharacteristic: CBCharacteristic?
     var charcteristicUUIDs: [CBUUID]!
+
+    var nmeaParse = NmeaParser()
+
 
     
     override func viewDidLoad() {
@@ -174,16 +178,13 @@ extension ViewController: CBPeripheralDelegate {
     }
     
     private func updateWithData(data : Data) {
-        if let txdata = String(data: data, encoding: String.Encoding.utf8) {
-            print(txdata)
-            let i = txdata.prefix(1)
-            let position = txdata.suffix(txdata.count - 1)
+        if let data = String(data: data, encoding: String.Encoding.utf8) {
+            print(data)
 
-            if i == "0"{
-                counterLabel.text = String(position)
-            }else if i == "1"{
-                counter2Label.text = String(position)
-            }
+            
+            let location = nmeaParse.parsesentence(data: data)
+            print(location! as CLLocation)
+            
             
         }
     }
